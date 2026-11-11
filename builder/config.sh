@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# Build runner tunables. Override any of them in builder/config.local.sh (gitignored)
+# or in the environment before starting build.sh.
+
+export BUILD_MODEL="${BUILD_MODEL:-opus}"
+export REVIEW_MODEL="${REVIEW_MODEL:-opus}"
+export FIX_MODEL="${FIX_MODEL:-sonnet}"
+export BUILD_EFFORT="${BUILD_EFFORT:-}"
+export REVIEW_EFFORT="${REVIEW_EFFORT:-}"
+export FIX_EFFORT="${FIX_EFFORT:-}"
+export REVIEW_EVERY_BATCH="${REVIEW_EVERY_BATCH:-1}"
+export MAX_BUILD_ATTEMPTS="${MAX_BUILD_ATTEMPTS:-2}"
+export MAX_FIX_ROUNDS="${MAX_FIX_ROUNDS:-3}"
+export MAX_QUALITY_ROUNDS="${MAX_QUALITY_ROUNDS:-1}"
+export BUILD_MAX_TURNS="${BUILD_MAX_TURNS:-300}"
+export REVIEW_MAX_TURNS="${REVIEW_MAX_TURNS:-80}"
+export FIX_MAX_TURNS="${FIX_MAX_TURNS:-150}"
+export HEARTBEAT_SECONDS="${HEARTBEAT_SECONDS:-120}"
+export STALL_MINUTES="${STALL_MINUTES:-20}"
+export SESSION_MAX_MINUTES="${SESSION_MAX_MINUTES:-150}"
+export LIMIT_BUFFER_MINUTES="${LIMIT_BUFFER_MINUTES:-2}"
+export LIMIT_FALLBACK_MINUTES="${LIMIT_FALLBACK_MINUTES:-30}"
+export TRANSIENT_BACKOFF_MINUTES="${TRANSIENT_BACKOFF_MINUTES:-1 2 5 10 20}"
+export SHOW_READS="${SHOW_READS:-0}"
+export SHOW_TEXT="${SHOW_TEXT:-1}"
+export CLAUDE_BIN="${CLAUDE_BIN:-claude}"
+export CLAUDE_PREFIX_ARGS="${CLAUDE_PREFIX_ARGS:-}"

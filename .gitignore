@@ -1,0 +1,7 @@
+# builder runtime (never remove these lines)
+builder/state/
+builder/logs/
+builder/config.local.sh
+# product (later batches may append below, never remove lines above)
+node_modules/
+out/
